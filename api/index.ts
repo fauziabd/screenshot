@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
 function checkUrl(string, hostname) {
   var url = "";
   try {
-    url = new URL(string);
+    url = new URL(decodeURIComponent(string));
   } catch (error) {
     return false;
   }
