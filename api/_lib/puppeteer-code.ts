@@ -16,7 +16,7 @@ async function getPage() {
 
 export async function getCode(url) {
     const page = await getPage();
-    await page.goto(url, {waitUntil: 'domcontentloaded'});
+    await page.goto(url, {waitUntil: 'networkidle0'});
     const file = await page.content();
     return file;
 }
