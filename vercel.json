@@ -1,12 +1,16 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/words",
-      "destination": "https://words.rewording.io"
+      "src": "/words",
+      "dest": "https://words.rewording.io/"
     },
     {
-      "source": "/words/:path*",
-      "destination": "https://words.rewording.io/:path*"
+      "src": "/words/(.*?)([.]\\w{2,5})(\\?[^/]+)?",
+      "dest": "https://words.rewording.io/$1$2$3"
+    },
+    {
+      "src": "/words/([\\S\\s]+)",
+      "dest": "https://words.rewording.io/$1/"
     }
   ]
 }
