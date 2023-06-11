@@ -6,7 +6,7 @@
 
       "src": "/blog",
 
-      "dest": "https://words.rewording.io"
+      "dest": "https://words.rewording.io/"
 
     },
 
@@ -14,7 +14,7 @@
 
       "src": "/blog/(.*?)([.]\\w{2,5})(\\?[^/]+)?",
 
-      "dest": "https://words.rewording.io/$1/$2/"
+      "dest": "https://words.rewording.io/$1$2$3/"
 
     },
 
