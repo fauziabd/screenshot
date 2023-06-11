@@ -1,1 +1,31 @@
-{}
+{
+
+  "routes": [
+
+    {
+
+      "src": "/blog",
+
+      "dest": "https://words.rewording.io"
+
+    },
+
+    {
+
+      "src": "/blog/(.*?)([.]\\w{2,5})(\\?[^/]+)?",
+
+      "dest": "https://words.rewording.io/$1/$2/"
+
+    },
+
+    {
+
+      "src": "/blog/([\\S\\s]+)",
+
+      "dest": "https://words.rewording.io/$1/"
+
+    }
+
+  ]
+
+}
